@@ -21,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.assign0.ui.theme.Assign0Theme
 import kotlin.random.Random
 
@@ -67,6 +68,7 @@ fun RandomChooser() {
             Spacer(modifier = Modifier.weight(1.0f))
             Text(
                 text = response,
+                fontSize = 24.sp,
                 modifier = Modifier.padding(12.dp)
             )
             Spacer(modifier = Modifier.weight(1.0f))
@@ -130,6 +132,17 @@ fun RandomChooser() {
                 text = "zijian20",
                 modifier = Modifier.padding(12.dp)
             )
+
+            Spacer(modifier = Modifier.weight(1.0f))
+
+            Button(
+                onClick = {
+                    response = defaultStr
+                    clicks = 0
+                }
+            ) {
+                Text("Reset")
+            }
 
             Spacer(modifier = Modifier.weight(1.0f))
 
